@@ -1,0 +1,41 @@
+{
+	"Table": {
+		"scope": "latex",
+		"prefix": "\\tab",
+		"body": [
+			"\\begin{table}[htbp]",
+			"\t\\centering",
+			"\t\\caption{$1}",
+			"\t\\begin{tabular}{$2}",
+			"\t\t\\hline",
+			"\t\t$4",
+			"\t\t\\hline",
+			"\t\t\\hline",
+			"\t\\end{tabular}",
+			"\t\\label{tab:$3}",
+			"\\end{table}"
+		]
+	},
+	"Figure": {
+		"scope": "latex",
+		"prefix": "\\fig",
+		"body": [
+			"\\begin{figure}[H]",
+			"\t\\centering",
+			"\t\\includegraphics[width=0.5\\textwidth]{$2}",
+			"\t\\caption{$1}",
+			"\t\\label{fig:$3}",
+			"\\end{figure}"
+		]
+	},
+	"Equation": {
+		"scope": "latex",
+		"prefix": "\\eq",
+		"body": [
+			"\\begin{equation}",
+			"\t$3",
+			"\t\\label{eq:$1}",
+			"\\end{equation}"
+		]
+	}
+}

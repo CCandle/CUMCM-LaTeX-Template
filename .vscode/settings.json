@@ -1,0 +1,91 @@
+{
+    // Latex workshop   \`
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%.aux"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "xelatex",
+            "tools": [
+                "xelatex"
+            ]
+        },
+        {
+            "name": "xebibitex",
+            "tools": [
+                "xelatex",
+                "bibtex",
+                "xelatex",
+                "xelatex"
+            ]
+        }
+    ],
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.latex.clean.fileTypes": [
+        "**/*.aux",
+        "**/*.bbl",
+        "**/*.blg",
+        "**/*.idx",
+        "**/*.ind",
+        "**/*.lof",
+        "**/*.lot",
+        "**/*.out",
+        "**/*.toc",
+        "**/*.acn",
+        "**/*.acr",
+        "**/*.alg",
+        "**/*.glg",
+        "**/*.glo",
+        "**/*.gls",
+        "**/*.ist",
+        "**/*.fls",
+        "**/*.log",
+        "**/*.fdb_latexmk"
+    ],
+    "files.exclude": {
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/*.aux": true,
+        "**/*.bbl": true,
+        "**/*.blg": true,
+        "**/*.idx": true,
+        "**/*.ind": true,
+        "**/*.lof": true,
+        "**/*.lot": true,
+        "**/*.out": true,
+        "**/*.toc": true,
+        "**/*.acn": true,
+        "**/*.acr": true,
+        "**/*.alg": true,
+        "**/*.glg": true,
+        "**/*.glo": true,
+        "**/*.gls": true,
+        "**/*.ist": true,
+        "**/*.fls": true,
+        "**/*.log": true,
+        "**/*.fdb_latexmk": true,
+        "**/*.gz": true
+    },
+    "latex-workshop.message.error.show": false,
+    "latex-workshop.message.warning.show": false,
+    "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
+    "editor.formatOnSave": false
+}
