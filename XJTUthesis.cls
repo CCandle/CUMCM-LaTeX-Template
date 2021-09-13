@@ -134,9 +134,9 @@
 \renewcommand*\maketitle{
     \begin{center}
         {\zihao{3} \heiti \bfseries \@title \par}
+        \vskip 1em
+        {\zihao{-4} \bfseries \@author \par}
         \vskip 2em
-            {\global\let\author\@empty}%
-            {\global\let\date\@empty}%
     \end{center}%
     \setcounter{page}{1}
     \xiaosi
