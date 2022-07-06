@@ -23,7 +23,7 @@
 \RequirePackage{enumerate}
 \RequirePackage{listings}
 \RequirePackage{xcolor}
-\RequirePackage{pdfpages}
+% \RequirePackage{pdfpages}
 \RequirePackage{lmodern}
 \RequirePackage{xpatch}
 \RequirePackage{xifthen}
@@ -88,7 +88,7 @@ linkcolor=black
 \ExplSyntaxOff
 \linespread{1.25}
 \setCJKmainfont{SimSun}
-\setmainfont{Times New Roman}
+% \setmainfont{Times New Roman}
 \newcommand{\xiaosi}{\zihao{-4}\songti}
 \captionsetup[table]{name = 表, font = small}
 \captionsetup[figure]{name = 图, font = small}
@@ -190,4 +190,10 @@ linkcolor=black
     \clearpage
 }
 
-% \RequirePackage{changepage}
+\ExplSyntaxOn
+\xpatchcmd \fontspec_new_script:nn
+    { \__fontspec_warning:nxx }
+    { \__fontspec_info:nxx }
+    {}{\fail}
+\newfontscript{CJK}{hani}
+\ExplSyntaxOff
