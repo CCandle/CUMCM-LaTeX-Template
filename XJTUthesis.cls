@@ -7,6 +7,7 @@
 \ProcessOptions\relax
 \LoadClass{ctexart}
 
+
 \RequirePackage{geometry}
 \RequirePackage{amsmath}
 \RequirePackage{float}
@@ -15,7 +16,7 @@
 \RequirePackage{cases}
 \RequirePackage{caption}
 \RequirePackage{fontspec}
-\RequirePackage{hyperref}
+\RequirePackage[hidelinks]{hyperref}
 \RequirePackage{hologo}
 \RequirePackage{gbt7714}
 \RequirePackage{appendix}
@@ -29,7 +30,14 @@
 \RequirePackage{blindtext}
 \RequirePackage{xargs}
 \RequirePackage{changepage}
+\RequirePackage{multirow}
 \RequirePackage{sty/matlab}
+
+% 隐藏超链接红框
+\hypersetup{
+colorlinks=true,
+linkcolor=black
+}
 
 % lstlisting settings
 \renewcommand{\lstlistingname}{源码}
