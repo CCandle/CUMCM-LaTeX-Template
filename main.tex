@@ -1,15 +1,50 @@
-\documentclass[UTF8,AutoFakeBold,twoside,fontset=Windows]{XJTUthesis}
+\documentclass[UTF8,AutoFakeBold,twoside]{XJTUMCM}
 
-% ------------  此处更改标题  ------------ %
+% ++++++++++++  文章排版设置  ++++++++++++ %
+% ----------  调整页眉页脚样式  ---------- %
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\headheight}{20pt}           % 设置页眉高度
+\renewcommand{\headrulewidth}{0mm}      % 设置页眉线
+\renewcommand{\footrulewidth}{0mm}      % 设置页脚线
+% L-R: 左右
+% E-O: 奇偶
+\fancyhead[RO]{\leftmark}
+\fancyhead[LE]{\titlecontent}
+% \fancyhead[CO, CE]{\titlecontent}
+\fancyfoot[RO, LE]{\thepage}
+% \fancyfoot[C]{\thepage}
+
+% -------------  行间距设置  ------------- %
+\usepackage[nodisplayskipstretch]{setspace}
+\setstretch{1.2}  % 全文行间距。但是这个跟word的计算方式不一样，目前得凭感觉
+\renewcommand{\captionfont}{\linespread{1}} % 题注行间距
+\renewcommand{\arraystretch}{1.2}           % 表格行间距
+
+% ------------  可选文章设置  ------------ %
+% \usepackage{pdfpages}   % 国赛前两页最好用官方的word导出pdf插入比较好
+% \usepackage{blindtext}  % 生成无用文本看效果，没用
+% \usepackage{sty/matlab} % 自定义的matlab语言关键词，代码高亮用
+% \usepackage{longtable}  % 跨页长表格
+% \usepackage{tabularx}   % 表格与页同宽所需环境
+% \usepackage{booktabs}   % 做三线表会比较需要
+% \usepackage{subcaption} % 子图题注
+% \usepackage{inconsolata}% linux等宽字体
+
+
+% ++++++++++++  此处更改标题  ++++++++++++ %
 \title{XJTU科技论文模板}
-\author{曲凌枫}
+
 
 \begin{document}
 \bibliographystyle{gbt7714-numerical}
+\nocite{*}  % 为了使所有参考文献加载出来。如果在文中已经用\cite标注出文献
+            % 并且不需要所有参考文献都加载出来，则注释掉这一行
 \maketitle
-\input{page/abstract}
+\input{page/abstract} % 引入摘要内容
 
-% ------------  此处更改内容  ------------ %
+% ++++++++++++  此处更改内容  ++++++++++++ %
 \include{page/content}
 % 每一章节都在./page 下新建 .tex 文件并\include即可。
 % 如果不想自动分页，可以将include改为input
