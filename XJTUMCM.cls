@@ -1,4 +1,4 @@
-\ProvidesClass{XJTUthesis}[I'm tired]
+\ProvidesClass{XJTUMCM}[I'm tired]
 \NeedsTeXFormat{LaTeX2e}
 
 \DeclareOption*{%
@@ -17,21 +17,17 @@
 \RequirePackage{caption}
 \RequirePackage{fontspec}
 \RequirePackage[hidelinks]{hyperref}
-\RequirePackage{hologo}
 \RequirePackage{gbt7714}
 \RequirePackage{appendix}
 \RequirePackage{enumerate}
 \RequirePackage{listings}
 \RequirePackage{xcolor}
-% \RequirePackage{pdfpages}
 \RequirePackage{lmodern}
 \RequirePackage{xpatch}
 \RequirePackage{xifthen}
-\RequirePackage{blindtext}
 \RequirePackage{xargs}
 \RequirePackage{changepage}
 \RequirePackage{multirow}
-\RequirePackage{sty/matlab}
 
 % 隐藏超链接红框
 \hypersetup{
@@ -86,7 +82,6 @@ linkcolor=black
 \ExplSyntaxOn
 \xpatchcmd\__xeCJK_check_family:n{\__xeCJK_warning:nxx}{\__xeCJK_info:nxx}{}{}
 \ExplSyntaxOff
-\linespread{1.25}
 \setCJKmainfont{SimSun}
 % \setmainfont{Times New Roman}
 \newcommand{\xiaosi}{\zihao{-4}\songti}
@@ -98,7 +93,7 @@ linkcolor=black
     subsection      = {format = \zihao{4} \heiti \bf},
     subsubsection   = {format = \zihao{4} \songti \bf},
 }
-\geometry{left=3.0cm, right=2.50cm, top=2.80cm, bottom=2.50cm}
+\geometry{left=2.8cm, right=2.50cm, top=2.50cm, bottom=2.50cm}
 
 % 自动引用名称
 \def\equationautorefname{式}
@@ -120,22 +115,7 @@ linkcolor=black
 \numberwithin{table}{section}
 \numberwithin{figure}{section}
 
-% 调整页眉页脚样式
-\RequirePackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-% L-R: 左右
-% E-O: 奇偶
-% \fancyhead[RO]{\leftmark}
-% \fancyhead[LE]{\rightmark}
-% \fancyhead[CO, CE]{\titlecontent}
-% \fancyhead[LO, RE]{\includegraphics[scale=0.09]{img/badge.png}} 
-% \fancyfoot[RO, LE]{\thepage}          
-\fancyfoot[C]{\thepage}
-% \fancyfoot[LO, RE]{}
-% \setlength{\headheight}{20.83476pt}   % 设置页眉高度
-\renewcommand{\headrulewidth}{0mm}      % 设置页眉线
-\renewcommand{\footrulewidth}{0mm}      % 设置页脚线
+
 
 % 自定义\maketitle样式
 \makeatletter
@@ -190,6 +170,7 @@ linkcolor=black
     \clearpage
 }
 
+% linux字体bug设置
 \ExplSyntaxOn
 \xpatchcmd \fontspec_new_script:nn
     { \__fontspec_warning:nxx }
@@ -197,3 +178,6 @@ linkcolor=black
     {}{\fail}
 \newfontscript{CJK}{hani}
 \ExplSyntaxOff
+
+% 防止警告。数模不需要作者
+\author{}
