@@ -83,7 +83,7 @@ linkcolor=black
 \xpatchcmd\__xeCJK_check_family:n{\__xeCJK_warning:nxx}{\__xeCJK_info:nxx}{}{}
 \ExplSyntaxOff
 \setCJKmainfont{SimSun}
-\setmainfont{Times New Roman}
+% \setmainfont{Times New Roman}
 \newcommand{\xiaosi}{\zihao{-4}\songti}
 \captionsetup[table]{name = 表, font = small}
 \captionsetup[figure]{name = 图, font = small}
