@@ -9,6 +9,7 @@
 目前这套模板毕竟只是我个人的总结，如果碰到了其他~~可可爱爱~~奇奇怪怪的排版要求，可以开[issue](https://github.com/CCandle/LaTeX-template/issues)一起讨论。
 
 ### 安装
+#### Windows环境
 环境要求：
 + 电脑上安装了`TexLive`
 + 如果使用VS Code(这也是我的推荐编辑方式)，安装了[LaTeX-Workshop](https://github.com/James-Yu/LaTeX-Workshop)
@@ -21,8 +22,12 @@ git clone https://github.com/CCandle/LaTeX-template.git
 
 或者下载[压缩包](https://github.com/CCandle/LaTeX-template/archive/refs/heads/master.zip)，解压到本地即可
 
+#### Linux环境
+Linux环境下主要是字体会有些问题。
+可以对应查看`Linux`分支下的模板。
+
 ### 使用
-详细使用教程请移步[我的Blog](https://blog.ccandletop)（尚未发布）
+详细的安装和使用教程请移步[我的Blog](https://blog.ccandletop)（尚未发布）
 
 ### 目录结构
 ```tree
