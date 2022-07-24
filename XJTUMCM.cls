@@ -48,10 +48,12 @@ linkcolor=black
     numberstyle         =   \zihao{-5}\ttfamily,
     captionpos          =   t,
     frame               =   single,
-    frameround          =   tttt,
+    % frameround          =   tttt,
     framexleftmargin    =   2em,
     framexrightmargin   =   2.5em,
     flexiblecolumns     =   false,
+    xleftmargin         =   25pt,
+    xrightmargin        =   25pt,
 }
 \lstdefinestyle{Python}{
     language        =   Python,
@@ -89,9 +91,9 @@ linkcolor=black
 \captionsetup[figure]{name = 图, font = small}
 \ctexset
 {
-    section         = {format = \zihao{-3} \heiti \bf},
-    subsection      = {format = \zihao{4} \heiti \bf},
-    subsubsection   = {format = \zihao{4} \songti \bf},
+    section         = {format = \zihao{4} \heiti \centering},
+    subsection      = {format = \zihao{-4} \heiti},
+    subsubsection   = {format = \zihao{-4} \heiti},
 }
 \geometry{left=2.8cm, right=2.50cm, top=2.50cm, bottom=2.50cm}
 
@@ -122,8 +124,6 @@ linkcolor=black
 \renewcommand*\maketitle{
     \begin{center}
         {\zihao{3} \heiti \bfseries \@title \par}
-        \vskip 1em
-        {\zihao{-4} \bfseries \@author \par}
         \vskip 2em
     \end{center}%
     \setcounter{page}{1}
