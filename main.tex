@@ -18,7 +18,7 @@
 
 % -------------  行间距设置  ------------- %
 \usepackage[nodisplayskipstretch]{setspace}
-\setstretch{1.2}  % 全文行间距。但是这个跟word的计算方式不一样，目前得凭感觉
+\setstretch{1.25}  % 全文行间距
 \renewcommand{\captionfont}{\linespread{1}} % 题注行间距
 \renewcommand{\arraystretch}{1.2}           % 表格行间距
 
@@ -26,15 +26,15 @@
 % \usepackage{pdfpages}   % 国赛前两页最好用官方的word导出pdf插入比较好
 \usepackage{blindtext}    % 生成无用文本看效果，没用
 % \usepackage{sty/matlab} % 自定义的matlab语言关键词，代码高亮用
-% \usepackage{longtable}  % 跨页长表格
-% \usepackage{tabularx}   % 表格与页同宽所需环境
-% \usepackage{booktabs}   % 做三线表会比较需要
-% \usepackage{subcaption} % 子图题注
+\usepackage{longtable}    % 跨页长表格
+\usepackage{tabularx}     % 表格与页同宽所需环境
+\usepackage{booktabs}     % 做三线表会比较需要
+\usepackage{subcaption}   % 子图
 % \usepackage{inconsolata}% linux等宽字体
 
 
 % ++++++++++++  此处更改标题  ++++++++++++ %
-\title{XJTU科技论文模板}
+\title{XJTU数模国赛模板}
 
 
 \begin{document}
@@ -45,11 +45,13 @@
 \input{page/abstract} % 引入摘要内容
 
 % ++++++++++++  此处更改内容  ++++++++++++ %
-\include{page/content}
+\input{page/test}
+\input{page/fig_tab}
+\input{page/formula}
 % 每一章节都在./page 下新建 .tex 文件并\include即可。
-% 如果不想自动分页，可以将include改为input
+% 如果想每章节另起一页分页，可以将input改为include
 
 \newpage
 \bibliography{doc/bibfile}
-\include{page/appendix}                                                              
+\include{page/appendix}
 \end{document}

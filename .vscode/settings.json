@@ -86,6 +86,9 @@
     },
     "latex-workshop.message.error.show": false,
     "latex-workshop.message.warning.show": false,
+    "latex-workshop.latex.autoBuild.run": "onSave",
     "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 2000
 }

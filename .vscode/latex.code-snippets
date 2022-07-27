@@ -7,10 +7,10 @@
 			"\t\\centering",
 			"\t\\caption{$1}",
 			"\t\\begin{tabular}{$2}",
-			"\t\t\\hline",
+			"\t\t\\toprule",
 			"\t\t$4",
-			"\t\t\\hline",
-			"\t\t\\hline",
+			"\t\t\\midrule",
+			"\t\t\\bottomrule",
 			"\t\\end{tabular}",
 			"\t\\label{tab:$3}",
 			"\\end{table}"

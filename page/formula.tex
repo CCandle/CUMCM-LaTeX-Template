@@ -1,0 +1,74 @@
+\section{公式}
+\subsection{行内公式}
+行内公式用两个\$包裹起来即可：
+
+示例公式$E=mc^2$
+\subsection{单行公式}
+行间公式有多种写法，最常用的是equation，带编号，如\autoref{eq:eqsample}
+\begin{equation}
+    \sum_{i=1}^{n}\frac{1}{i}>\int_{1}^{n}\frac{1}{x}\d x=\ln(n+1)
+    \label{eq:eqsample}
+\end{equation}
+
+如果公式不需要带编号，则可以简单的用一对\$\$括起来
+$$
+\int x^2 \d x = \frac{1}{3}x^3
+$$
+
+或者像这样
+\begin{equation*}
+    \int_{-\infty}^{+\infty}\delta(t)=1
+\end{equation*}
+
+\subsection{多行公式}
+\subsubsection{align}
+最常用align*。该环境下每行都会按照\&所在位置对齐。
+\begin{align*}
+    \int \frac{1}{x\ln x}\d x 
+    &= \int \frac{1}{\ln x}\cdot \frac{1}{x}\d x\\
+    &= \int \frac{1}{\ln x} \d \ln x\\
+    &= \int  \d \ln((\ln x))\\
+    &= \ln(\ln x)
+\end{align*}
+
+或者带编号，如\autoref{eq:alisample}
+\begin{equation}
+    \begin{aligned}
+        a&=b\\
+        c&=d
+    \end{aligned}
+    \label{eq:alisample}
+\end{equation}
+
+不使用align环境的原因是：align环境每一行都会有编号，使用较少。
+
+大括号也是类似的方法生成的
+$$
+\varepsilon(t)=
+\left\{
+\begin{aligned}
+    1&,t\ge 0\\
+    0&,t<0
+\end{aligned}
+\right.
+$$
+
+\subsubsection{gather}
+居中对齐环境
+\begin{gather*}
+    a+b=b+a\\
+    a=b=c
+\end{gather*}
+
+\subsubsection{array}
+array环境类似于表格，通常用于输出数组或更精细的公式排版
+$$
+\left(
+    \begin{array}{cccc}
+        a_{00}&a_{01}&a_{02}&a_{03}\\
+        a_{10}&a_{11}&a_{12}&a_{13}\\
+        a_{20}&a_{21}&a_{22}&a_{23}\\
+        a_{30}&a_{31}&a_{32}&a_{33}\\
+    \end{array}
+\right)
+$$

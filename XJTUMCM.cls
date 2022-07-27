@@ -1,4 +1,4 @@
-\ProvidesClass{XJTUMCM}[I'm tired]
+\ProvidesClass{XJTUMCM}[A CUMCM template by QU Lingfeng from Xi'an Jiao Tong University]
 \NeedsTeXFormat{LaTeX2e}
 
 \DeclareOption*{%
@@ -35,6 +35,8 @@ colorlinks=true,
 linkcolor=black
 }
 
+\graphicspath{{img/}}
+
 % lstlisting settings
 \renewcommand{\lstlistingname}{源码}
 \lstset{
@@ -46,6 +48,8 @@ linkcolor=black
     showstringspaces    =   false,
     numbers             =   left,
     numberstyle         =   \zihao{-5}\ttfamily,
+    basewidth       =   0.6em,
+    columns         =   fixed,
     captionpos          =   t,
     frame               =   single,
     % frameround          =   tttt,
@@ -54,7 +58,9 @@ linkcolor=black
     flexiblecolumns     =   false,
     xleftmargin         =   25pt,
     xrightmargin        =   25pt,
+    breaklines      =   true,
 }
+
 \lstdefinestyle{Python}{
     language        =   Python,
     basicstyle      =   \zihao{-5}\ttfamily,
@@ -63,10 +69,8 @@ linkcolor=black
     keywordstyle    =   [2] \color[RGB]{170, 55, 49},
     stringstyle     =   \color[RGB]{68, 140, 39},
     commentstyle    =   \color{gray} \ttfamily,
-    breaklines      =   true,
-    columns         =   fixed,
-    basewidth       =   0.6em,
 }
+
 \lstdefinestyle{Matlab}{
     language        =   Matlab,
     basicstyle      =   \zihao{-5}\ttfamily,
@@ -75,9 +79,6 @@ linkcolor=black
     keywordstyle    =   [2] \color[RGB]{170, 55, 49},
     stringstyle     =   \color[RGB]{68, 140, 39},
     commentstyle    =   \color{gray} \ttfamily,
-    breaklines      =   true,
-    columns         =   fixed,
-    basewidth       =   0.6em,
 }
 
 % 字体、段落格式设定
@@ -113,11 +114,9 @@ linkcolor=black
 
 % 自动编号设置
 % 下列编号带章号
-\numberwithin{equation}{section}
-\numberwithin{table}{section}
-\numberwithin{figure}{section}
-
-
+% \numberwithin{equation}{section}
+% \numberwithin{table}{section}
+% \numberwithin{figure}{section}
 
 % 自定义\maketitle样式
 \makeatletter
@@ -181,3 +180,8 @@ linkcolor=black
 
 % 防止警告。数模不需要作者
 \author{}
+
+\def\dif{\mathop{}\hphantom{\mskip-\thinmuskip}\mathrm{d}}%
+\let\daccent\d
+\let\d\relax
+\newcommand\d{\ifmmode\dif\else\expandafter\daccent\fi}
