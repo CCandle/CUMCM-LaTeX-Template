@@ -32,7 +32,10 @@
 % 隐藏超链接红框
 \hypersetup{
 colorlinks=true,
-linkcolor=black
+linkcolor=black,
+anchorcolor=black,
+citecolor=black,
+urlcolor=black
 }
 
 \graphicspath{{img/}}
