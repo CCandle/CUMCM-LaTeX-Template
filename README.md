@@ -27,7 +27,7 @@ Linux环境下主要是字体会有些问题。
 可以对应查看`Linux`分支下的模板。
 
 ### 使用
-详细的安装和使用教程请移步[我的Blog](https://blog.ccandletop)（尚未发布）
+详细的安装和使用教程请移步[我的Blog](https://blog.ccandle.top)（尚未发布）
 
 ### 目录结构
 ```tree
@@ -35,18 +35,23 @@ LaTeX-template
 ├── doc                 // 存放参考文献
 │   └── bibfile.bib     // bibtex源码
 ├── main.pdf            // 生成的论文
-├── main.tex            // 主tex文件，控制文章
+├── main.tex            // 主tex文件，控制文章结构
 ├── page                // 存放各章节tex文件
-│   ├── abstract.tex    // 建议每个章节/小节分一个文件
-│   ├── appendix.tex
-│   └── content.tex
+│   ├── abstract.tex    // 摘要
+│   ├── appendix.tex    // 附录，通常放代码
+│   ├── fig_tab.tex     // 章节：图表环境
+│   ├── formula.tex     // 章节：公式
+│   └── test.tex        // 章节：样式测试
+├── src                 // 章节：源代码
+│   ├── sample.m
+│   └── sample.py
 ├── sty                 // 存放样式文件
 │   └── matlab.sty      // 自定义matlab关键词文件
 └── XJTUMCM.cls         // 模板文件
 ```
 
 ### 相关资料
-基础的$\LaTeX$知识可以参考[一份其实很短的 LaTeX 入门文档](https://liam.page/2014/09/08/latex-introduction/)，作者是个大佬，写了很多关于LaTeX的文章，可以自行查阅。
+基础的LaTeX知识可以参考[一份其实很短的 LaTeX 入门文档](https://liam.page/2014/09/08/latex-introduction/)，作者是个大佬，写了很多关于LaTeX的文章，可以自行查阅。
 
 推荐的书籍是刘海洋的《LaTeX入门》。然而这本书中的内容已经远远高于入门了，建议把它当做一本很好的工具书来使用。
 
